@@ -16,7 +16,6 @@ export const Person = ({ person }) => {
       >
         {`My name is ${name}`}
       </h2>
-
       {age && (
         <p
           className={cn('Person__age', {
@@ -34,8 +33,9 @@ export const Person = ({ person }) => {
           'Person__partner--single': !isMarried,
         })}
       >
-        {}
-        {isMarried ? `${partnerName} is my ${partnerRole}` : 'I am not married'}
+        {isMarried
+          ? `${partnerName} is my ${partnerRole}`
+          : 'I am not married'}
       </p>
     </section>
   );
